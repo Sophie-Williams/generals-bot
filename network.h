@@ -3,6 +3,7 @@
 
 #include <functional>
 #include <iostream>
+#include <memory>
 
 #include <sio_client.h>
 
@@ -29,7 +30,7 @@ class network {
         void on_rank_received(listener);
 
     private:
-        sio::client client;
+        std::unique_ptr<sio::client> client;
 };
 
 
