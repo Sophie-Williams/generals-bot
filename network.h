@@ -17,7 +17,7 @@ class network {
         void join_private(std::string game_id);
         void set_force_start(std::string queue_id, bool set_force_start = true);
 
-private:
+    private:
         sio::client client;
 };
 
