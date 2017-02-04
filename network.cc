@@ -19,10 +19,10 @@ void network::join_private(std::string game_id) {
     client.socket()->emit("join_private", join);
 }
 
-void network::set_force_start(std::string queue_id, bool set_force_start) {
+void network::set_force_start(std::string queue_id, bool force_start) {
     sio::message::list l;
     l.push(sio::string_message::create(queue_id));
-    l.push(sio::bool_message::create(set_force_start));
+    l.push(sio::bool_message::create(force_start));
     client.socket()->emit("set_force_start", l);
 }
 
