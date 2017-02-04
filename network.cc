@@ -26,3 +26,30 @@ void network::set_force_start(std::string queue_id, bool force_start) {
     client.socket()->emit("set_force_start", l);
 }
 
+void network::on_game_start(listener l) {
+    client.socket()->on("game_start", l);
+}
+
+void network::on_game_update(listener l) {
+    client.socket()->on("game_update", l);
+}
+
+void network::on_game_lost(listener l) {
+    client.socket()->on("game_lost", l);
+}
+
+void network::on_game_won(listener l) {
+    client.socket()->on("game_won", l);
+}
+
+void network::on_message_received(listener l) {
+    client.socket()->on("chat_message", l);
+}
+
+void network::on_stars_received(listener l) {
+    client.socket()->on("stars", l);
+}
+
+void network::on_rank_received(listener l) {
+    client.socket()->on("rank", l);
+}

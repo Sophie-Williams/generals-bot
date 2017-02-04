@@ -18,6 +18,16 @@ class network {
         void set_force_start(std::string queue_id,
                 bool force_start = true);
 
+        typedef std::function<void(sio::event&)> listener;
+
+        void on_game_start(listener);
+        void on_game_update(listener);
+        void on_game_lost(listener);
+        void on_game_won(listener);
+        void on_message_received(listener);
+        void on_stars_received(listener);
+        void on_rank_received(listener);
+
     private:
         sio::client client;
 };
