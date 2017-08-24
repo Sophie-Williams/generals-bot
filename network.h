@@ -32,5 +32,17 @@ class network {
         sio::client client;
 };
 
+/*
+namespace msg {
+    struct game_start {
+        int playerIndex;
+        std::string replay_id;
+        std::string chat_room;
+        std::string team_chat_room;
+        std::vector<std::string> usernames;
+        // TODO: teams
+    };
+}
+*/
 
 #endif

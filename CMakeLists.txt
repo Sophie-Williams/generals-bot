@@ -1,6 +1,9 @@
 cmake_minimum_required (VERSION 2.6)
 project (generals)
 
+# Enable support for YCM
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
+
 find_package(Threads)
 
 include_directories ("${PROJECT_SOURCE_DIR}/socket.io-client-cpp")
